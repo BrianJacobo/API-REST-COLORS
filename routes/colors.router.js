@@ -39,7 +39,7 @@ router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const body = req.body;
     const color = await service.update(parseInt(id), body);
-    res.status(201).json(color);
+    res.status(200).json(color);
   } catch (error) {
     res.status(404).json({
       message: error.message
