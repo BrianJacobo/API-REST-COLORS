@@ -18,11 +18,10 @@
   <p>DOCKER<p>
   <p>UNIT TEST<p>
 
-## Instalación
-<h4>HOW RUN<h4>
-<p>`$ nvm use`<p>
-<p>`$ npm i`<p>
-<p>`$ npm run dev | $npm run start`<p>
+## Install
+`$ nvm use`
+`$ npm i`
+`$ npm run dev | $npm run start`
 
   ## Docker
   . `sudo docker build -t api-colors .`
