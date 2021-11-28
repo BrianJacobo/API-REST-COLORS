@@ -24,7 +24,10 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.json({
+    message: 'Hello!, this is my challenge. Happy coding Brian Jacobo Fuentes',
+    linkedin: 'https://www.linkedin.com/in/brian-jacobo-fuentes/'
+  });
 });
 
 routerApi(app);
