@@ -1,0 +1,24 @@
+API REST COLORS
+
+GET()
+  url: 'http://localhost:3000/'
+  description: 'information about me'
+
+  url: 'http://localhost:3000/colors'
+  description: 'it'll return all colors'
+
+  url: 'http://localhost:3000/colors/:id'
+  description: 'it'll return a colors by ID'
+
+POST()
+  url: 'http://localhost:3000/colors'
+  description: 'it'll create a new color'
+  more: 'name and color values are necessary to create a color'
+
+PUT()
+  url: 'http://localhost:3000/colors/:id'
+  description: 'it'll modify a color value by ID'
+
+DELTE()
+  url: 'http://localhost:3000/colors/:id'
+  description: 'it'll delete a color by ID'
