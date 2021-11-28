@@ -48,9 +48,15 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  const { id } = req.params;
-  const color = service.delete(parseInt(id));
-  res.status(201).json(color);
+  try {
+    const { id } = req.params;
+    const color = await service.delete(parseInt(id));
+    res.status(200).json(color);
+  } catch (error) {
+    res.status(404).json({
+      message: error.message
+    });
+  }
 });
 
 module.exports = router;

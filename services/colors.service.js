@@ -1,23 +1,8 @@
+const {colors} = require('../consts/color')
 class ColorsService {
 
   constructor(){
-    this.colors = [
-      {
-        "id":1,
-        "name":"cerulean",
-        "color":"#98B2D1"
-      },
-      {
-        "id":2,
-        "name":"fuchsia rose",
-        "color":"#C74375"
-      },
-      {
-        "id":3,
-        "name":"true red",
-        "color":"#BF1932"
-      }
-    ];
+    this.colors = colors;
   }
 
   async create( data ){
@@ -63,13 +48,10 @@ class ColorsService {
   async delete( id ) {
     const index = this.colors.findIndex(item => item.id === id);
     if (index === -1) {
-      throw new Error('color not found')
+      throw new Error('color not found');
     }
     this.colors.splice(index, 1);
-    return {
-      message : 'deleted successfully',
-      id: id
-    }
+    return { id };
   }
 }
 
