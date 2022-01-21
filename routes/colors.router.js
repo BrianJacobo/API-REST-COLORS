@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   res.status(200).json(colors);
 });
 
-router.put('/webhook', async (req, res) => {
+router.post('/webhook', async (req, res) => {
   console.log('body', req.body);
   console.log('body.data', req.body.data);
   console.log('params', req.params);
