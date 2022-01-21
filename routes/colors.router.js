@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
 
 router.post('/webhook', async (req, res) => {
   console.log('body', req.body);
+  console.log('body.answers', req.body.answers);
   console.log('body.data', req.body.data);
   console.log('params', req.params);
   res.status(200).json({message:'ok'});
